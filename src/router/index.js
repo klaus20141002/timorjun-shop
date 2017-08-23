@@ -1,27 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-/*import secondcomponent from '@/components/secondcomponent'*/
+import VueResource from 'vue-resource'
 import firstcomponent from '@/components/firstcomponent'
+import secondcomponent from '@/components/secondcomponent'
 
-Vue.use(Router)
+Vue.use(Router);
+Vue.use(VueResource);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
-    },
-    {
-      path: '/1',
       name: 'firstcomponent',
       component: firstcomponent
-    }/*,
+    },
     {
       path: '/2',
       name: 'secondcomponent',
       component: secondcomponent
-    }*/
+    }
   ]
 })
